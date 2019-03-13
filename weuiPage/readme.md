@@ -1,0 +1,1 @@
+settimeout()方法会更新this，所以要先用变量保存前面那个作用域的This指向
