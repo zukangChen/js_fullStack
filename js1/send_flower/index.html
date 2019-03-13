@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //objiect
+        //描述的方式对象是怎样打的就出来了
+        //对象字面量JSON OBJiect
+        const czk ={
+            name:'陈祖康',
+            age:22,
+            single:true,
+            hometown:'高安',
+            room:1123,
+            yz:84,
+            //上面都是属性
+            //函数功能 对象的行为
+            //target 为一个形参
+            sendFlower: function(target){
+                //  console.log(target.name);
+                target.receiverFlower(czk);
+            }
+        };
+        const xiaoqi ={
+            name:'小柒',
+            age:20,
+            mood:50,
+            receiverFlower:function(sender){
+                //如果心情指数大于80就收花,否则就拒绝
+                // if(sender.yz<85){
+                //     console.log('收到了花，但是没空，这辈子都不可能有空');
+                // }else{
+                //     console.log('备胎排一下')
+                // }
+                if(xiaoqi.mood>85)
+                {
+                console.log('收到了花');
+                }else{
+                    console.log('没有收到花');
+                    console.log(xiaoqi.mood);
+                }
+            },
+            listenGoodMood:function(){
+               // console.log('谁都不想见');
+                //心情不好
+                //定时器
+                setTimeout(function(){
+                  //  console.log('本公主心情变好了');
+                  xiaoqi.mood=88;
+                  xiaoqi.receiverFlower();
+                },3000)
+            }
+        };
+        // 送花 A->B A->C->B
+        // A  送花 send_Flower
+        // C  收花 转送给B
+        // B  收花 receive_Flower
+        const yaer ={
+            name:'雅儿',
+             //与小柒实现了同样的接口
+            receiverFlower:function(sender){
+                // 心情好，再送
+                // xiaoqi.receiverFlower(sender);
+                //代理者，监听下小柒的心情
+                xiaoqi.listenGoodMood(function(){
+                    
+                    
+                })
+               
+            }
+
+        }
+    </script>
+</body>
+</html>

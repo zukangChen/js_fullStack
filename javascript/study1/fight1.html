@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    var add = function(a,b){
+        if (typeof a!=='number' && b!=='number')
+       {  throw{
+            name:'typeerror',
+            message:'add needs number'
+       }
+        }
+        return a+b;
+    }
+   var myobject= {
+       value:0,
+       increment: function (intc){
+           this.value += typeof inc ==='number' ? inc : 1;
+       }
+   }
+   myobject.increment();
+//    document.writeln(myobject.value); 
+   console.log(myobject.value);
+   myobject.increment(2);
+   document.writeln(myobject.value); 
+   console.log(myobject.value);
+   myobject.double= function(){
+       var that =this;
+       var helper =function(){
+           that.value =add (that.value,that.value);
+       }
+       helper();
+   };
+   myobject.double();
+   console.log(myobject.value);
+   var try_it = function(){
+       try{
+           add('seven');
+       }catch (e){
+           document.writeln(e.name,e.message);
+       }
+   }
+</script>
+<body>
+    
+</body>
+</html>

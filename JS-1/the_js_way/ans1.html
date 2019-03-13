@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+        <h1>Some musical instruments</h1>
+        <ul>
+          <li id="clarinet" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Clarinet">clarinet</a>
+          </li>
+          <li id="saxophone" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Saxophone">saxophone</a>
+          </li>
+          <li id="trumpet" class="wind brass">
+            The <a href="https://en.wikipedia.org/wiki/Trumpet">trumpet</a>
+          </li>
+          <li id="violin" class="chordophone">
+            The <a href="https://en.wikipedia.org/wiki/Violin">violin</a>
+          </li>
+          <li id="harpsichord">
+            The <a href="https://en.wikipedia.org/wiki/Harpsichord">harpsichord</a>
+          </li>
+        </ul>
+      <script>
+      function linkInfo(){
+        const a = document.getElementsByTagName("a");
+        if(!a.length) return;
+        console.log(a.length);
+        console.log(a[0].href);
+        console.log(a[a.length-1].href);
+    
+        //打印多少个a标签
+        //第一个标签的href
+        //最后一个标签的ehref
+      }
+      linkInfo();
+      console.log(document.getElementById("saxophone").classList.contains("wind")//contains是否包含
+      );
+      //判断某id的元素,具有某类名如果有就是true 没有就是false
+      //找不到元素，还要找类名，提示错误
+      const hasClass =( id,someClass) =>{
+    // saxophone woodwind true
+    // saxophone brass false
+    // trumpet brass true
+    // contrabass chorphone error
+        let a=document.getElementById(id);
+        if(a){
+            return(a.classList.contains(someClass));
+
+        }else {
+            console.log("error");
+            return false;
+     }
+    };
+    console.log(hasClass("saxophone","woodwind"));
+    console.log(hasClass("saxophone","brass"));
+    console.log(hasClass("trumpet","brass"));
+    console.log(hasClass("constrabass","chorphone"));
+
+      </script>
+</body>
+</html>
