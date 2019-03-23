@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jd-2018-campus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./lib/odometer.mim.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+    <audio src="./bgm1.mp3" id="bgm1"></audio>
+    <div class="music-btn off"></div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide p1">
+                <div class="light"></div>
+                <div class="slogon">
+                    这是一家以速度为见长的公司
+                </div>
+            </div>
+            <div class="swiper-slide p2">
+                <div class="bg"></div>
+                <div class="light"></div>
+                <div class="dog"></div>
+                <div class="text text-top ">
+                    the speed of life beginning
+                </div>
+                <div class="text text-bottom ">
+                    快才拥有可能，这是一家以速度见长的公司
+                </div>
+                <div class="num">
+
+                </div>
+            </div>
+            <div class="swiper-slide p3">Slide 3
+                <div class="bg"></div>
+                <div class="light"></div>
+                <div class="cat"></div>
+                <div class="text text-top ">
+                    the glory of the human race
+                </div>
+                <div class="text text-bottom ">
+                    快为满足期待，专属定制成长方案，要你不负众望。
+                </div>
+                <div class="num1">
+
+                </div>
+            </div>
+            <div class="swiper-slide p8">
+                <div class="logo-ran"></div>
+                <div class="text-slogon">
+                    更快到达你想要的未来
+                </div>
+                <div class="cube-cnt-2">
+                    <div class="cube-2">
+                        <span>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="cube-cnt-3">
+                    <div class="cube-3">
+                        <span>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="text-title">
+                    京东2018校园招聘
+                </div>
+                <div class="text-detail">
+                    招聘人群:208<br />
+                    本科 硕士 博士
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="./lib/odometer.min.js"></script>
+    <script>
+        const p2Num = document.querySelector('.p2 .num');
+        const p3Num = document.querySelector('.p3 .num1');
+        var el = document.querySelector('.some-element');
+        od = new Odometer({
+            el: p2Num,
+
+            value: 1.618,
+
+            // Any option (other than auto and selector) can be passed in here
+            format: '(,ddd).ddd',
+            theme: 'default'
+        });
+        od = new Odometer({
+            el: p3Num,
+            value: 66.6,
+
+            // Any option (other than auto and selector) can be passed in here
+            format: '(dd).d',
+            theme: 'default'
+        });
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical', // 垂直切换选项
+            on: {
+                slideChangeTransitionEnd: function () {
+
+                    if (this.activeIndex === 1) {
+                        p2Num.innerHTML = 0.004;
+
+
+                    }//切换结束时，告诉我现在是第几个slide
+
+                    if (this.activeIndex === 2) {
+                        p3Num.innerHTML = 10.4;
+
+
+                    }//切换结束时，告诉我现在是第几个slide
+
+
+                },
+
+            }
+        })
+
+
+       
+
+
+        //音乐播放
+        const musicBtn = document.querySelector('.music-btn');
+        const bgm1 = document.getElementById('bgm1');
+        const paras = document.querySelector('.paras')
+        musicBtn.addEventListener('click', () => {
+            if (bgm1.paused) {
+                bgm1.play();
+                // musicBtn.classList.remove('off');
+            } else {
+                bgm1.pause();
+                // musicBtn.classList.add('off');
+            }
+            musicBtn.classList.toggle('off');
+        });
+
+        //p3
+        // const p3Num = document.querySelector('.p3 .num1');
+        // od = new Odometer({
+        //     el: p3Num,
+        //     value: 1.618,
+
+        //     // Any option (other than auto and selector) can be passed in here
+        //     format: '(,ddd).ddd',
+        //     theme: 'default'
+        // });
+
+
+        // // or
+
+        // var mySwiper = new Swiper('.swiper-container', {
+        //     direction: 'vertical', // 垂直切换选项
+        //     on: {
+        //         slideChangeTransitionEnd: function () {
+        //             if (this.activeIndex === 2) {
+        //                 p3Num.innerHTML = 0.004;
+        //             }//切换结束时，告诉我现在是第几个slide
+        //         },
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.page{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #f5fafe;
+}
+.mp-userinfo{
+    width: 100%;
+    height: 45%;
+    
+    
+}
+.mp-userinfo__pic{
+    width: 100%;
+    height: 45%;
+    background: url(./t23.jpg) no-repeat;
+    background-size: cover;
+    
+}
+.mp-userinfo__meta{
+    width: 100%;
+    height: 55%;
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+.mp-userinfo__name{
+    padding-top: 11px;
+    padding-left: 11px;
+}
+
+.po::after{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(./sexm.png);
+    background-size:contain;
+    margin-left: 7px;
+   
+
+}
+.mp-userinfo__box{
+    margin-top: 10px;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 10%;
+}
+.mp-userinfo__box p{
+    font-size: 5px;
+    color: #ffffff;
+    
+}
+.box1{
+    float: left;
+    margin-left: 10px;
+    width: 40px;
+    height: 19px;
+    background-color: #48a6fd;
+}
+.box2{
+    float: left;
+    width: 60px;
+    height: 19px;
+    background-color: #1dca42;
+}
+.box3{
+    float: left;
+    width: 53px;
+    height: 19px;
+    background-color: #fb8800;
+}
+.mp-userinfo__selfs{
+    margin-top: 39px;
+    color: #b8b8b8;
+    font-size: 11px;
+    line-height: 100%;
+    
+    
+}
+.mp-userinfo__self1{
+    float: left;
+    
+}
+.mp-userinfo__self1::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(./postion.png);
+    background-size:contain;
+    margin-left: 7px;
+}
+.mp-userinfo__self2{
+    margin-left: 195px;
+}
+.mp-userinfo__self2::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(./lingdai.png);
+    background-size:contain;
+    margin-left: 7px;
+}
+.mp-userinfo__self3{
+    float: left;
+    margin-top: 11px;
+    
+}
+.mp-userinfo__self3::before{
+    content: '';
+    display: inline-block;
+    width: 21px;
+    height: 18px;
+    background: url(./love.png);
+    background-size:contain;
+    margin-left: 7px;
+}
+.mp-userinfo__self4{
+    margin-left: 195px;
+    margin-top: 11px;
+}
+.mp-userinfo__self4::before{
+    content: '';
+    display: inline-block;
+    width: 21px;
+    height: 18px;
+    background: url(./wexin.png);
+    background-size:contain;
+    margin-left: 7px;
+}
+
+.mp-userinfo__self5{
+    margin-top: 7px;
+}
+.mp-userinfo__self5::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(./phone.png);
+    background-size:contain;
+    margin-left: 7px;
+}
+.pic2{
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    right: 18px;
+    bottom: 358px;
+    background: url(./t2.png);
+    background-size: cover;
+}
+.pic1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 18px;
+    bottom: 431px;
+    background: url(./t1.png);
+    background-size: cover;
+}
+.pic{
+    width: 36px;
+    height: 36px;
+    /* border: 5px solid #e5e5e5; */
+    
+    border-radius: 50%;
+   display:block; 
+}
+.mp-userinfo__border{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.mp-userinfo__ad{
+    width: 100%;
+    height: 90px;
+    background-color:blue;
+    border:1px solid wheat;
+    border-radius: 5px;
+    
+}
+.font{
+    width: 91px;
+    height: 60px;
+   color: #fff;
+    margin:0 auto;
+    text-align: center;
+    padding-top: 25px;
+}
+.mp-userinfo__personPhoto img{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+
+}
+.mp-userinfo__person{
+    padding: 11px!important;
+}
+
+.mp-userinfo__bottom{
+   
+    padding-top: 21px;
+    height: 89px;
+}
+.mp-userinfo__bottom_btn{
+    width: 166px;
+    height: 49px;
+    border: 1px solid white;
+    float: left;
+    border-radius: 30px;
+    font-size: 16px;
+    
+}
+.btn1{
+    color: #333333;
+    background-color:#fff;
+    margin-right: 7px;
+    text-align: center;
+    line-height: 49px;
+}
+.btn2{
+    background-color:#48a6fd;
+    color: #ffffff;
+    text-align: center;
+    line-height: 49px;
+}
+.btn1::before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(./bianji.png);
+    background-size:contain;
+
+}
+.weui-media-box__title{
+    border-left:4px solid #48a6fd;
+}
