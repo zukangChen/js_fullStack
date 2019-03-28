@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(planet){
+            this.planet=planet;
+        }
+        Animal.prototype.getPlanet = function(){
+            return this.planet;
+        }
+        // 人类 construtor 男
+        function Person(name){
+            this.name=name;
+        }
+        // Person 应该拿到Animal上的属性和方法
+        // cxq.__proto__拿到了构造函数原型上的属性和方法，可不可以让Animal做他的父类呢？
+        // 属性               第二者原型
+        // new Animal() = cxq;
+        // animal.__proto__ = Animal.prototype;
+        // cxq.planet cxq.getName();
+        // cxq.__proto__(第一次原型查找).__proto__=Animal.prototype->getPlanet
+        Person.prototype = new Animal('earth');
+        Person.prototype.getName = function(){
+            console.log(this.name);
+        } 
+        var cxq =new Person('陈小柒');
+    </script>
+</body>
+</html>
