@@ -52,7 +52,7 @@ img{
     display: none;  
 }
 .layer1{
-    display: none;
+    /* display: none; */
 }
 .loadImg{
 position: absolute;

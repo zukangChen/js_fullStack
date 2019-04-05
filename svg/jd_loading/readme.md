@@ -1,0 +1,3 @@
+loading 菊花图gif
+gif设计 gif的大小可能是几kb或十几kb
+svg可以省大小
