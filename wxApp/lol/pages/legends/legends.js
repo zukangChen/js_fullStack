@@ -1,0 +1,26 @@
+Page({
+    data:{
+        legends:[
+            {
+            name:'阿卡丽',
+            title:'法师 刺客',
+            src:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84006.jpg'
+        },
+        {
+            name:'亚索',
+            title:'快乐风男',
+            src:'https://ossweb-img.qq.com/images/lol/web201310/skin/big157010.jpg'
+        },
+        {
+            name:'火男',
+            title:'玩火的黑人',
+            src:'https://ossweb-img.qq.com/images/lol/web201310/skin/big63007.jpg'
+        },
+        {
+            name:'维鲁斯',
+            title:'爱神丘比特',
+            src:'https://ossweb-img.qq.com/images/lol/web201310/skin/big110007.jpg'
+        }
+    ]
+    }
+})
