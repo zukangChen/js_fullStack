@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/trends/trends",
+    "pages/news/news",
+    "pages/issues/issues",
+    "pages/pulls/pulls",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Mini GitHub",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#eee",
+    "selectedColor": "#f44",
+    "borderStyle": "white",
+    "backgroundColor": "#24292e",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "News",
+        "iconPath": "octicons/mark-github.png",
+        "selectedIconPath": "octicons/mark-github.png"
+      },
+      {
+        "pagePath": "pages/issues/issues",
+        "text": "Issue",
+        "iconPath": "octicons/issue-opened.png",
+        "selectedIconPath": "octicons/issue-opened.png"
+      },
+      {
+        "pagePath": "pages/trends/trends",
+        "text": "Trend",
+        "iconPath": "octicons/flame.png",
+        "selectedIconPath": "octicons/flame.png"
+      },
+      {
+        "pagePath": "pages/pulls/pulls",
+        "text": "PR",
+        "iconPath": "octicons/git-pull-request.png",
+        "selectedIconPath": "octicons/git-pull-request.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "Me",
+        "iconPath": "octicons/person.png",
+        "selectedIconPath": "octicons/person.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
