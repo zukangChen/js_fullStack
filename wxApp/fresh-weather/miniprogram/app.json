@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/diary/index"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "networkTimeout": {
+    "request": 3000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}
