@@ -1,0 +1,63 @@
+/* miniprogram/pages/songDetail/songDetail.wxss */
+.line{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;/*显示几行*/
+    overflow: hidden;
+}
+.cu-card.article>.cu-item .content {
+    padding:20rpx 30rpx;
+}
+.cu-card.article>.cu-item .content>image {
+    height: 11.6em;
+}
+.text-content{
+    height: 3.8em;
+}
+.margin-left {
+    margin-left:0rpx;
+    margin-right:30rpx;
+    
+}
+.trans{
+    position: relative;
+    top:5px
+  }
+  
+.wux-sticky{position:relative;z-index:1}
+.wux-sticky-item{position:relative;font-size:28rpx}
+.wux-sticky-item__hd{background:#eee;width:100%;height:64rpx;line-height:64rpx}
+.wux-sticky-item__title{width:100%;padding:0 30rpx;box-sizing:border-box;background:#eee}
+.wux-sticky-item--fixed .wux-sticky-item__title{position:fixed;left:0;top:0;z-index:2}
+
+.text-cut{
+    line-height: 20rpx;
+}
+.wux-sticky-item{
+    padding: 20rpx 30rpx;
+}
+.fix{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    z-index:1024;
+    box-shadow:0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+
+}
+.play{
+    margin-left: 20rpx;
+}
+.left,.right{
+    position:absolute;
+    top:76rpx;
+    left:360rpx;
+    width:76rpx;
+    height:76rpx;
+}
+.left image ,.right image{
+    width: 100%;
+    height: 100%;
+}
+.right{
+    left:490rpx;
+}

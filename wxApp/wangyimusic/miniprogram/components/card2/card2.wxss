@@ -1,0 +1,40 @@
+/* components/card2/card2.wxss */
+.line{
+  overflow: hidden;    
+  text-overflow: ellipsis;      
+  white-space: nowrap;
+  width: 20em; 
+  }
+  .cards {
+    padding: 16px;
+  }
+  
+  .card {
+    background: #fff;
+    margin-bottom: 16px;
+    transition: 0.5s all;
+  }
+  
+  .card.hover {
+    box-shadow: 0 32px 48px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card image {
+    position: relative;
+  }
+  /* video 时长 */
+  .card .label {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 24rpx;
+    padding: 4rpx 8rpx;
+    background: rgba(0, 0, 0, 0.85);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+  }
+  
+  .card image, .card video {
+    height: 36vh;
+  }
+  

@@ -1,0 +1,137 @@
+/* components/tabbar/tabbar.wxss */
+.container{
+    height:38px;
+    width: 100%;
+    display: flex
+}
+.left{
+background-color:var(--red); 
+width: 36px;
+}
+.middle{
+background-color: yellow; 
+flex: 1;    
+}
+.right{
+background-color: var(--red);
+width: 36px;
+}
+.text-center {
+    text-align:center;
+
+}
+.bg-red {
+    background-color:var(--red);
+    color:var(--white);
+
+}
+.nav {
+white-space:nowrap;
+
+}
+view, scroll-view, swiper, button, input, textarea, label, navigator, image {
+box-sizing:border-box;
+
+}
+scroll-view {
+    display:block;
+    width:100%;
+
+}
+.nav .cu-item.cur {
+    border-bottom:4rpx solid;
+
+}
+.nav .cu-item {
+    height:90rpx;
+    display:inline-block;
+    line-height:90rpx;
+    margin:0 10rpx;
+    padding:0 20rpx;
+
+}
+.text-white, .line-white, .lines-white {
+    color:var(--white);
+
+}
+/* 侧边抽屉 */
+/* .cu-modal.drawer-modal.show .cu-dialog {
+    transform:translateX(0%);
+    
+    }
+.cu-modal.drawer-modal.justify-start .cu-dialog {
+    transform:translateX(-100%);
+
+}
+.cu-modal.drawer-modal .cu-dialog {
+height:100%;
+min-width:200rpx;
+border-radius:0;
+margin:initial;
+transition-duration:0.3s;
+
+}
+.basis-lg {
+flex-basis:60%;
+
+}
+.cu-dialog {
+position:relative;
+display:inline-block;
+vertical-align:middle;
+margin-left:auto;
+margin-right:auto;
+width:680rpx;
+max-width:100%;
+background-color:#f8f8f8;
+border-radius:10rpx;
+overflow:hidden;
+
+}
+.text-left {
+text-align:left;
+
+}
+.cu-list.menu {
+display:block;
+overflow:hidden;
+
+}
+
+.cu-list.menu>.cu-item.arrow {
+padding-right:90rpx;
+
+}
+.cu-list.menu>.cu-item {
+position:relative;
+display:flex;
+padding:0 30rpx;
+min-height:100rpx;
+background-color:var(--white);
+justify-content:space-between;
+align-items:center;
+
+}
+.cu-list>.cu-item {
+transition:all .6s ease-in-out 0s;
+transform:translateX(0rpx);
+
+}
+
+
+.text-left {
+text-align:left;
+
+}
+.cu-list.menu {
+display:block;
+overflow:hidden;
+
+}
+
+.cu-list.menu>.cu-item .content>view:first-child {
+display:flex;
+align-items:center;
+
+} */
+

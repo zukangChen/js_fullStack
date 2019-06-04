@@ -1,0 +1,71 @@
+<!-- components/card2/card2.wxml -->
+<!-- <view class="cu-card case {{isCard?'no-card':''}}" wx:for="{{mvId}}" wx:key="index" wx:if="{{index<6}}" data-id="{{index}}">
+    <view class="cu-item shadow">
+        <view class="text-content">{{item.artistName}}</view>
+        <view class="image">
+            <image src="{{item.cover}}" mode="widthFix"></image>
+            <view class="cu-tag bg-blue">独家</view>
+            <view class="cu-bar bg-shadeBottom">
+                <text class="text-cut">{{item.briefDesc}}</text>
+            </view>
+        </view>
+        <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                
+                <view class="content flex-sub">
+                    <view class="line text-grey">{{item.desc}}</view>
+                    <view class="text-gray text-sm flex justify-between">
+                        {{item.publishTime}}
+                        <view class="text-gray text-sm">
+                            <text class="cuIcon-attentionfill margin-lr-xs"></text>
+                            {{item.playCount}}
+                            <text class="cuIcon-appreciatefill margin-lr-xs"></text>
+                            {{item.likeCount}}
+                            <text class="cuIcon-messagefill margin-lr-xs"></text>
+                            {{item.subCount}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view> -->
+
+<view class="cards">
+    <view class="card" wx:for="{{mvId}}" wx:key="index" wx:if="{{index<6}}" data-id="{{index}}" >
+    <video src="{{item.brs[240]}}" hidden="{{currentVid !== item.id}}" id="{{item.id}}" duration="{{item.duration}}" poster="{{item.cover}}" />
+    <image style="width:100%" data-vid="{{item.id}}" src="{{item.cover}}" hidden="{{currentVid == item.id}}" bindtap="play">
+        <view class="label">
+            {{item.duration}}
+        </view>
+    </image>
+    <navigator url="/pages/show/index" >
+        <view class="content">
+            <view class="header">
+                {{item.briefDesc}}
+            </view>
+             <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                
+                <view class="content flex-sub">
+                    <view class="line text-grey">{{item.desc}}</view>
+                    <view class="text-gray text-sm flex justify-between">
+                        {{item.publishTime}}
+                        <view class="text-gray text-sm">
+                            <text class="cuIcon-attentionfill margin-lr-xs"></text>
+                            {{item.playCount}}
+                            <text class="cuIcon-appreciatefill margin-lr-xs"></text>
+                            {{item.likeCount}}
+                            <text class="cuIcon-messagefill margin-lr-xs"></text>
+                            {{item.subCount}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        </view>
+    </navigator>
+    </view>
+</view>
+
+

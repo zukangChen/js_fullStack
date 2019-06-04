@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "card" : "../../components/card/card",
+    "tabbar" : "../../components/tabbar/tabbar",
+    "card2" : "../../components/card2/card2"
+  }
+}

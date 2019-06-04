@@ -1,0 +1,35 @@
+<!--miniprogram/pages/discover/discover.wxml-->
+<view class="search">
+    <view class="search-header">
+        <view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+            <view class="search-form round">
+                <text class="cuIcon-search"></text>
+                <input type="text" placeholder="输入搜索的关键词" confirm-type="search" bindinput="forName"></input>
+            </view>
+            <view class="action">
+                <button class="cu-btn bg-gradual-green shadow-blur round" bindtap="search">搜索</button>
+            </view>
+        </view>
+    </view>
+    <view class="search-content">
+        <view class="search-item" wx:for="{{searchHot}}" wx:key="index" bindtap="audioPlay" data-index="{{index}}" data-id="{{item.id}}" data-singer ="{{item.artists[0].name}}">
+            <view class="search-item-top">
+                <text class="title">{{item.first}}{{item.name}}</text>
+            </view>
+            <view class="search-item-desc">
+                <text class="desc">{{item.artists[0].name}} - {{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="play fix">
+        <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" bindtimeupdate="" bindended="funended" binderror="funerror"></audio>
+        <view class="constrol">
+            <view class="left" bindtap="bindLeft">
+                <image src="../../images/left.png" />
+            </view>
+            <view class="right" bindtap="bindRight">
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+    </view>
+</view>

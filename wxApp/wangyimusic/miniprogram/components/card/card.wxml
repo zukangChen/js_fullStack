@@ -1,0 +1,19 @@
+<view class="n-rcmd">
+    <view class="v-hd2">
+        <navigator class="tit f-ff2 f-tdn" url="https://music.163.com/discover/playlist/">
+            推荐歌单
+        </navigator>
+        <button class="btn" bindtap="music" >
+            <text class="s-fc3" >歌单广场</text>
+        </button>
+    </view>
+</view>
+<view class="music">
+    <view class="item" wx:for="{{repo}}" wx:key="index" wx:if="{{index<6}}" data-id="{{item.id}}" bindtap="getSong">
+        <view class="container u-cover">
+            <image src="{{item.coverImgUrl}}" />
+            <text class="text">{{item.name}}</text>
+        </view>
+    </view>
+</view>
+

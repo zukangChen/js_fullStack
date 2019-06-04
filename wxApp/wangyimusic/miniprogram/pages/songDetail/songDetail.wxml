@@ -1,0 +1,56 @@
+<!-- miniprogram/pages/songDetail/songDetail.wxml -->
+<view class=" cu-card article {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="content">
+      <image src="{{songList.coverImgUrl}}" mode="aspectFill"></image>
+      <view class=" line desc">
+        <view class="text-content">{{songList.name}}</view>
+        <view>
+          <view class="cu-avatar round margin-left" style="background-image:url({{songList.creator.avatarUrl}});"></view>
+          <text>{{songList.creator.nickname}}</text>
+          <image class="trans" style="width:18px;height:18px; margin-left:6px;" src="/images/bing.png" />
+          <view class="text-content">{{songList.description}}</view>
+          <!-- <view class="cu-tag bg-red light sm round"></view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="page">
+  <view class="page__bd">
+    <wux-sticky scrollTop="{{ scrollTop }}">
+      <wux-sticky-item class="wux-sticky-item">
+        <view slot="title">
+          播放全部 🐤
+          <!-- 播放 -->
+        </view>
+        <view slot="content">
+          <view class="demo-item" wx:for="{{searchHot}}" wx:key="index" data-index="{{index}}" data-tracksId="{{item.id}}" bindtap="audioPlay" data-author="{{item.ar[0].name}}" data-name="{{item.name}}" data-poster="{{item.al.picUrl}}">
+            <view class="cu-list menu-avatar">
+              <view class="cu-item">
+                <view class="cu-avatar round lg" style="background-image:url({{item.al.picUrl}});"></view>
+                <view class="content">
+                  <view class="text-grey">{{item.name}}</view>
+                  <view class="text-gray text-sm flex">
+                    <text class="text-cut">{{item.ar[0].name}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </wux-sticky-item>
+    </wux-sticky>
+  </view>
+  <view class="play fix">
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" bindtimeupdate="" bindended="funended" binderror="funerror"></audio>
+    <view class="constrol">
+      <view class="left" bindtap="bindLeft">
+        <image src="../../images/left.png" />
+      </view>
+      <view class="right" bindtap="bindRight">
+        <image src="../../images/right.png" />
+      </view>
+    </view>
+  </view>
+</view>

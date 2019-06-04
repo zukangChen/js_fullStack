@@ -1,0 +1,155 @@
+<!-- <tabbar></tabbar> -->
+<!-- tabbar -->
+<view class="flex  p-xs margin-bottom-sm mb-sm position">
+  <view class="flex bg-grey padding-sm  radius" bindtap="showModal" data-target="DrawerModalL">
+    <image style="width:36px;height:36px" src="../../images/more.png"></image>
+  </view>
+  <view class="flex-treble bg-grey padding-sm  radius">
+    <scroll-view scroll-x="{{true}}" scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+      <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap="tabSelect" data-name="{{item.name}}" data-id="{{index}}" wx:if="{{index<10}}">
+        <text style="line-height:38px">{{item}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="flex bg-grey padding-sm  radius" bindtap="search">
+    <image style="width:36px;height:36px" src="../../images/search.png"></image>
+  </view>
+</view>
+<!-- 第二个页面 -->
+<view class="{{TabCur == 1 ? 'show' : 'hide'}}">
+
+  <!-- 侧边抽屉 -->
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModalL'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="avatar">
+         <image src="{{avatarUrl}}" />
+      </view>
+      <view class="header">
+        <view class="name">
+          {{nickName}}
+        </view>
+        <view class="grade">
+          <text >lv.8</text>
+        </view>
+        <view class="btn">
+          <view class="img">
+            <image src="../../images/sign.png" />
+          </view>
+          <view class="sign">
+            签到
+          </view>
+        </view>
+      </view>
+      <view class="middle">
+        <view class="info" wx:for="{{more}}" wx:key="">
+          <view class="icon">
+            <image src="{{item.icon}}" />
+          </view>
+          <view class="name">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="cu-item arrow" wx:for="{{item}}" wx:key>
+        <view class="icon">
+          <image src="{{item.icon}}" />
+        </view>
+        <view class="content">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="night" wx:for="{{bottom}}" wx:key="">
+        <view class="icon">
+          <image src="{{item.icon}}" />
+        </view>
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+  <!-- 轮播 -->
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </view>
+    </swiper-item>
+  </swiper>
+  <scroll-view style="text-align: center" scroll-x="{{true}}" scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view bindtap="click" class="cu-item" data-id="0" role="" aria-label="">
+      <image style="width:25px;height:25px" src="../../images/tu1.png"></image>
+      <text style="display:block">每日推荐</text>
+    </view>
+    <view style="height:120rpx" bindtap="click" class="cu-item" data-id="1" role="" aria-label="">
+      <image style="width:25px;height:25px" src="../../images/tu2.png"></image>
+      <text style="display:block">歌单</text>
+    </view>
+    <view style="height:120rpx" bindtap="click" class="cu-item" data-id="2" role="" aria-label="">
+      <image style="width:25px;height:25px" src="../../images/tu3.png"></image>
+      <text style="display:block">排行榜</text>
+    </view>
+    <view style="height:120rpx" bindtap="click" class="cu-item" data-id="3" role="" aria-label="">
+      <image style="width:25px;height:25px" src="../../images/tu4.png"></image>
+      <text style="display:block">电台</text>
+    </view>
+    <view style="height:120rpx" bindtap="click" class="cu-item" data-id="4" role="" aria-label="">
+      <image style="width:25px;height:25px" src="../../images/tu5.png"></image>
+      <text style="display:block">直播</text>
+    </view>
+  </scroll-view>
+  <!-- 推荐歌单 -->
+  <card repo="{{images}}"></card>
+  <!-- mv -->
+  <card2 mvId="{{mvId}}"></card2>
+
+</view>
+<!-- 第一个页面 -->
+<view class="{{TabCur == 0 ? 'show' : 'hide'}}">
+  0
+</view>
+<!-- 第三个页面 -->
+<view class="{{TabCur == 2 ? 'show' : 'hide'}}">
+  <view class="item" wx:for="{{friendshare}}" wx:key="" >
+    <view class="avartar">
+      <image src="{{item.user.avatarUrl}}" />
+    </view>
+    <view class="contain">
+        <view class="content">
+          <view class="head"> {{item.user.nickname}} {{item.info.commentThread.resourceTitle}}</view>
+          <view class="fan">{{item.rcmdInfo.userReason}}</view>
+          <view class="text">{{item.rcmdInfo.reason}}</view>
+          <view class='photo'>
+            <view class='photo-item' wx:for="{{item.pics}}" wx:key="">
+              <image src='{{item.originUrl}}'></image>
+            </view>
+          </view>
+          <view class='content-bottom'>
+            <view class='content-bottom-icon'>
+              <view class='icon'>
+                <image src='../../images/share.png'></image>
+              </view>
+              <text>{{item.info.shareCount}}</text>
+            </view>
+             <view class='content-bottom-icon'>
+              <view class='icon'>
+                <image src='../../images/comment.png'></image>
+              </view>
+              <text>{{item.info.commentCount}}</text>
+            </view>
+             <view class='content-bottom-icon'>
+              <view class='icon'>
+                <image src='../../images/good.png'></image>
+              </view>
+              <text>{{item.info.likedCount}}</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+<!-- 第四个页面 -->
+<view class="{{TabCur == 3 ? 'show' : 'hide'}}">
+  3
+</view>

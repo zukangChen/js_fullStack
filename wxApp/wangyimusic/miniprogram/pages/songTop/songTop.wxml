@@ -1,0 +1,10 @@
+<!--miniprogram/pages/songTop/songTop.wxml-->
+<text class='title'>所有榜单</text>
+<view class='songTop'>
+  <view class='songTop-item' wx:for="{{songTop}}" wx:key="{{index}}" style="background-image: url('{{item.coverImgUrl}}');background-size:cover" data-id="{{item.id}}" bindtap="getSong">
+    <view class='photo'>
+      <text class='updateTime'>{{item.updateFrequency}}</text>
+    </view>
+    <text class='name'>{{item.name}}</text>
+  </view>
+</view>

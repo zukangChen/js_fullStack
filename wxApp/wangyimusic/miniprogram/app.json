@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/friends/friends",
+    "pages/video/video",
+    "pages/songSquare/songSquare",
+    "pages/songDetail/songDetail",
+    "pages/songTop/songTop"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "网易",
+    "navigationBarTextStyle": "black"
+  }
+}

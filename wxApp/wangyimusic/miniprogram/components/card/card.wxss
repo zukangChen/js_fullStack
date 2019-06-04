@@ -1,0 +1,49 @@
+/* components/card/dard.wxss */
+.n-rcmd{
+    margin: 0;
+    padding: 10px 10px;
+    position:relative;
+}
+.v-hd2{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.tit{
+    font-size: 16px;
+    flex: 1;
+    
+}
+.btn{
+    height: 36px;
+    width: 80px;
+    padding: 0!important;
+    margin: 0!important;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+}
+.s-fc3{
+    line-height: 36px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+.music{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+.item{
+    margin-right: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+.container{
+    width: 100px;
+    height: 150px;
+}
+image{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}

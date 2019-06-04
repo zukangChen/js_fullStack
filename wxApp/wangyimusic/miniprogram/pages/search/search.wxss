@@ -1,0 +1,50 @@
+   /* miniprogram/pages/discover/discover.wxss */
+page{
+    background-color: #808080;
+}
+.search-content{
+    margin-top:100rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    position:relative;
+}
+.search-item{
+    position: relative;
+    padding: 30rpx 0;
+    border-bottom:1px solid #cdcdcd;
+
+}
+.search-item-top{
+    font-size: 38rpx;
+    padding: 16rpx;
+    color: #87cefa;
+}
+.desc{
+    font-size: 34rpx;
+    color: #00ff00;
+}
+.fix{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    z-index:1024;
+    box-shadow:0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+
+}
+.play{
+    margin-left: 20rpx;
+}
+.left,.right{
+    position:absolute;
+    top:76rpx;
+    left:360rpx;
+    width:76rpx;
+    height:76rpx;
+}
+.left image ,.right image{
+    width: 100%;
+    height: 100%;
+}
+.right{
+    left:490rpx;
+}
